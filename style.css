@@ -190,10 +190,11 @@ button {
 .dropbtn {
     background-color: #4CAF50;
     color: white;
-    /*padding: 16px;*/
+    padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    line-height: 2px;
     /*position: absolute;*/
 }
 
@@ -222,6 +223,7 @@ button {
     text-decoration: none;
     display: block;
     font-size: 16px;
+    border-bottom: 2px solid lightgrey;
 }
 
 /* Change color of dropdown links on hover */
