@@ -7,7 +7,8 @@
 
 .help-option {
   align-items: center;
-  border-radius: 10px;
+  background: #7cc3ff;
+  border-radius: 5px;
   box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
   color: white;
   display: flex;
@@ -24,18 +25,18 @@
   transform: scale(1.05);
 }
 
-.help-option:nth-of-type(1) {
+/*.help-option:nth-of-type(2n + 1) {
   background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 }
 
-.help-option:nth-of-type(2) {
+.help-option:nth-of-type(2n + 2) {
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-}
-
+}*/
+/*
 .help-option:nth-of-type(3) {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
 .help-option:nth-of-type(4) {
   background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-}
+}*/

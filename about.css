@@ -7,13 +7,13 @@
 
 .about-option {
   align-items: center;
-  background: white;
-  border: 1px solid rgba(36, 37, 38, 0.08);
-  border-radius: 10px;
+  background: #7cc3ff;
+  border-radius: 5px;
   box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
-  color: black;
+  color: white;
   display: flex;
   flex-basis: 20%;
+  font-family: 'Work Sans';
   height: 4em;
   justify-content: center;
   margin-left: 5px;
@@ -25,3 +25,11 @@
 .about-option:hover {
   transform: scale(1.05);
 }
+
+/*.about-option:nth-of-type(2n + 1) {
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}*/
+
+/*.about-option:nth-of-type(2n + 2) {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}*/
