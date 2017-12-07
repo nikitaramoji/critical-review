@@ -216,7 +216,8 @@ button {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    /*background-color: #f9f9f9;*/
+    background-color: lightgray;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -232,6 +233,7 @@ button {
     display: block;
     font-size: 16px;
     border-bottom: 2px solid lightgrey;
+    background-color: #f9f9f9;
 }
 
 /* Change color of dropdown links on hover */
