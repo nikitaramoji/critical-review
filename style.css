@@ -10,6 +10,10 @@
 	height: 400px;
 }
 
+#something {
+	display: flex;
+}
+
 #paras {
 	/*margin-top: -50px;*/
 }
@@ -191,14 +195,14 @@ button {
     /*background-color: #4CAF50;*/
     color: white;
     padding: 16px;
-    font-size: 16px;
+    font-size: 13px;
     border: none;
     cursor: pointer;
     line-height: 0px;
     text-transform: uppercase;
     height: -20px;
     /* position: absolute; */
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid lightgrey;
     border-radius: 0;
     background-color: transparent;
     color: grey;
@@ -209,7 +213,7 @@ button {
 .dropdown {
     position: relative;
     display: inline-block;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -231,9 +235,13 @@ button {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-size: 16px;
+    font-size: 13px;
     border-bottom: 2px solid lightgrey;
     background-color: #f9f9f9;
+}
+
+.quick-link {
+	width: 100px;
 }
 
 /* Change color of dropdown links on hover */
@@ -242,12 +250,20 @@ button {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
-    font-size: 16px;
+    font-size: 13px;
+}
+
+.dropdown {
+/*	position: absolute;
+  	bottom: 0;*/
+  	/*left: 0;*/
+  	margin-top: -80px;
+  	margin-left: 330px;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    font-size: 16px;
+    /*font-size: 16px;*/
 }
 
 #home-mobile {
@@ -257,13 +273,23 @@ button {
 
 @media only screen and (max-width: 1100px) {
 	#title {
-		font-size: 40px;
+		/*font-size: 40px;*/
 	}
 }
 
 @media only screen and (max-width: 900px) {
 	#title {
 		font-size: 30px;
+	}
+
+	.dropdown {
+		margin: 0px auto;
+		border-bottom: none;
+		margin-left: -16px;
+	}
+
+	.dropdown button {
+		border-bottom: none;
 	}
 }
 
@@ -318,5 +344,15 @@ button {
 	#sidebar div {
 		/*margin: 0 auto;*/
 		text-align: center;
+	}
+
+	.dropdown {
+		margin: 0px auto;
+		border-bottom: none;
+		margin-left: -16px;
+	}
+
+	.dropdown button {
+		border-bottom: none;
 	}
 }
