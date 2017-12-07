@@ -1,0 +1,38 @@
+.subscribe {
+  display: flex;
+  width: 100%;
+}
+
+#your-email {
+  display: flex;
+  height: 35px;
+  flex-basis: 75%;
+	border-bottom: 1px solid lightgrey;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.0);
+	/*background-color: none;*/
+	margin-top: 4px;
+	font-size: 16px;
+	font-weight: 300;
+	font-family: 'Lato';
+}
+
+#email-subscribe {
+  background: #ff9a9e;
+  border-radius: 5px;
+  box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+  cursor: pointer;
+  font-family: 'Lato';
+  font-size: 14px;
+  height: 40px;
+  margin-left: 1em;
+  transition: 0.3s all ease-in-out;
+}
+
+#email-subscribe:hover {
+  box-shadow: 0 9px 15px rgba(36, 37, 38, 0.12);
+  transform: scale(1.05);
+}

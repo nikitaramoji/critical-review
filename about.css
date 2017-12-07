@@ -1,0 +1,27 @@
+.about-options {
+  align-items: center;
+  display: flex;
+  height: 6em;
+  width: 100%;
+}
+
+.about-option {
+  align-items: center;
+  background: white;
+  border: 1px solid rgba(36, 37, 38, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+  color: black;
+  display: flex;
+  flex-basis: 20%;
+  height: 4em;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+}
+
+.about-option:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Critical Review</title>
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="shared.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width" />
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        let data = new google.visualization.DataTable();
+        data.addColumn('string', 'CLASS YEAR');
+        data.addColumn('number', 'Number of students');
+        data.addRows([
+          ['First years', 9],
+          ['Sophomores', 51],
+          ['Juniors', 43],
+          ['Seniors', 26],
+          ['Grad students', 40]
+        ]);
+
+        // Set chart options
+        let options = {'title':'CLASS YEAR',
+        				'width':350,
+                       	'height':300,
+                   	   	'animation': {
+                   	   		'startup': true,
+                   	   		'duration': 1000,
+        					'easing': 'out'
+                   	   	},
+                   	   	slices: {
+				            0: { color: '#7cc3ff' },
+				            1: { color: '#e0edfe' },
+				            2: { color: '#abf1ff' },
+				            3: { color: '#e0fffd' },
+				            4: { color: '#e0f6fe' },
+				          },
+				        pieSliceTextStyle: {
+				        	color: "black", fontName: "Lato", fontSize: "12px"
+				        },
+				        titleTextStyle: {
+				        	color: "grey", fontName: "Work Sans", fontSize: 14, bold: false
+				        },
+				        backgroundColor: '#f9f9f9',
+                   	   	pieHole: 0.3,
+                   	   	legend: {
+                   	   		// position: 'bottom',
+                   	   		textStyle: {
+                   	   			color: 'grey', fontSize: 12
+                   	   		}
+                   	   	}
+                   	};
+
+        // Instantiate and draw our chart, passing in some options.
+        let chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+
+        options['title'] = 'CONCENTRATOR';
+        data = new google.visualization.DataTable();
+        data.addColumn('string', 'Concentrator');
+        data.addColumn('number', 'Number of students');
+        data.addRows([
+          ['Concentrator', 59],
+          ['Non-concentrator', 21],
+          ['Undecided', 4]
+        ]);
+        chart = new google.visualization.PieChart(document.getElementById('chart_div_conc'));
+        chart.draw(data, options);
+      }
+
+      let close1 = document.getElementById("close");
+      let modal = document.getElementById('charts');
+	  // let container = document.getElementById("container")
+
+	  // When the user clicks on the button, open the modal
+	  const openOnClick = () => {
+	  	  let modal = document.getElementById('charts');
+	  	  let paras = document.getElementById("paras")
+	  	  // let overlay = document.getElementById("overlay")
+	      // modal.style.display = "initial";
+    	  modal.style.opacity = 1;
+    	  // overlay.style.opacity = 0;
+    	  // overlay.style.display = 'block';
+    	  modal.style.width = '800px';
+    	  modal.style.height = "300px";
+    	  paras.style.opacity = 0.3;
+	  }
+
+	  const close = () => {
+	  	alert('yes');
+	  	let modal = document.getElementById('charts');
+    	modal.style.opacity = 0;
+    	modal.style.width = '1px';
+    	modal.style.height = '1px';
+    	let paras = document.getElementById("paras")
+    	paras.style.opacity = 1;
+	  }
+    </script>
+</head>
+<body>
+	<div class="navbar" onclick="openOnClick()">
+		<div id="home"><a class="home-link" href="./index.html">THE CRITICAL REVIEW</a></div>
+		<div class="space"></div>
+		<a class="navbar-link" href="./about.html">About</a>
+		<a class="navbar-link" href="./help.html">Help</a>
+		<a class="navbar-link" href="./contribute.html">Write for CR</a>
+		<a class="navbar-link" href="./quotes.html">Funny Quotes</a>
+	</div>
+	<div class="notnavbar">
+		<div id="sidebar">
+			<form>
+				<div class="in">
+					<div>Course Code</div>
+					<input type="text" class="text-input" id="course-code" name="course-code" placeholder="cs1300; math1010">
+				</div>
+				<div class="in">
+					<div>Instructor</div>
+					<input type="text" class="text-input" id="course-prof" name="course-prof" placeholder="huang, jeff; hughes">
+				</div>
+				<div class="in">
+					<div>Title</div>
+					<input type="text" class="text-input" id="course-title" name="course-title" placeholder="analysis">
+				</div>
+				<div class="in" id="last">
+					<div>Department</div>
+					<input type="text" class="text-input" id="course-dept" name="course-dept" placeholder="engn">
+				</div>
+				<div id="quick-links">
+					<button class="quick-link">math  x</button>
+					<button class="quick-link">csci  x</button>
+					<button class="quick-link">apma  x</button>
+				</div>
+				<div id="submit-query">
+					<button id="search">search</button>
+				</div>
+			</form>
+		</div>
+		<div class="content">
+			<div class="container">
+				<div id="code">CSCI1300</div>
+				<div id="title">User Interfaces and User Experience</div>
+				<div class="outer">
+					<div class="rating">
+						<!-- <div class="A"> -->
+						<div><div class="r">Prof Rating</div>
+							<div>
+								<svg width="93px" height="19px" viewBox="0 0 93 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+								    <desc>Created with Sketch.</desc>
+								    <defs></defs>
+								    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								        <g id="Desktop-Copy-5" transform="translate(-612.000000, -449.000000)" fill="#7cc3ff">
+								        <!-- <g id="Desktop-Copy-5" transform="translate(-612.000000, -449.000000)" fill="#00fff3"> -->
+								            <g id="Group" transform="translate(612.000000, 449.000000)">
+								                <circle id="Oval-2" cx="9.5" cy="9.5" r="9.5"></circle>
+								                <circle id="Oval-2-Copy" cx="34.5" cy="9.5" r="9.5"></circle>
+								                <circle id="Oval-2-Copy-2" fill-opacity="0.601845562" cx="58.5" cy="9.5" r="9.5"></circle>
+								                <circle id="Oval-2-Copy-3" fill-opacity="0.317028986" cx="83.5" cy="9.5" r="9.5"></circle>
+								            </g>
+								        </g>
+								    </g>
+								</svg>
+							</div>
+						</div>
+						<div><div class="r">Course Rating</div>
+							<div>
+								<svg width="93px" height="19px" viewBox="0 0 93 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+								    <desc>Created with Sketch.</desc>
+								    <defs></defs>
+								    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								        <g id="Desktop-Copy-5" transform="translate(-612.000000, -449.000000)" fill="#7cc3ff">
+								            <g id="Group" transform="translate(612.000000, 449.000000)">
+								                <circle id="Oval-2" cx="9.5" cy="9.5" r="9.5"></circle>
+								                <circle id="Oval-2-Copy" cx="34.5" cy="9.5" r="9.5"></circle>
+								                <circle id="Oval-2-Copy-2" fill-opacity="0.601845562" cx="58.5" cy="9.5" r="9.5"></circle>
+								                <circle id="Oval-2-Copy-3" fill-opacity="0.317028986" cx="83.5" cy="9.5" r="9.5"></circle>
+								            </g>
+								        </g>
+								    </g>
+								</svg>
+							</div>
+						</div>
+						<div>
+							<div class="r">Avg Hrs/Wk</div>
+							<div class="i">9</div>
+						</div>
+						<div>
+							<div class="r">Max Hrs/Wk</div>
+							<div class="i">14</div>
+						</div>
+					</div>
+					<div id="paras">
+					<div class="description">
+						“User Interfaces and User Experience” (CSCI1300) is a class that covers “when to use different interfaces, modeling and representing user interaction, principles of user experience design, eliciting requirements and feedback from users, methods for designing and prototyping interfaces, and user interface evaluation,” according to the course description. There are no official prerequisites to the course, but students generally felt that prior exposure to graphic design and various software tools for design was helpful, though certainly not necessary.
+					</div>
+					<div id="charts">
+						<div id="chart_div"></div>
+						<div id="chart_div_conc"></div>
+					</div>
+					<div class="description">
+						Professor Jeff Huang received universal praise for his engaging and enthusiastic lecture style. Many students appreciated his clear and organized lectures, though some noted that the lecture material was not always relevant for the assignments. Reviewers applauded Professor Huang for his sense of humor and passion for the subject.
+					</div>
+					<div class="description">
+						Students were divided on the effectiveness of the frequent questions he posed to the students during lecture; some felt that this method was successful in encouraging more class participation, while others noted that it resulted in many awkward silences. Professor Huang was frequently available and approachable outside of class.
+					</div>
+					<div class="description">
+						Coursework for the class consisted of weekly readings, projects, and journal entries, as well as one final presentation and four labs over the course of the semester. Respondents found the assignments to be relatively easy but also unnecessarily tedious and time-consuming, with many describing the assignments as “busywork.” Some students also noted that grading was slow and inconsistent and that feedback was not always useful.
+					</div>
+					<div class="description">
+						Overall, students enjoyed the content of the course and found the lectures to be interesting and engaging. Many mentioned the guest lectures as a highlight of the course. Students appreciated that the work was similar to what is done in industry. Some suggested that the course could be improved by spacing out deadlines, or by reducing the number of assignments. Reviewers found the class to be unique at Brown and suggested that interested students could also shop graphic design classes in RISD if they are looking for a class with similar content.
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
