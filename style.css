@@ -239,12 +239,13 @@ button {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #f1f1f1; font-weight: bold;}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
     font-size: 16px;
+    font-weight: bold;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
