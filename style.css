@@ -282,6 +282,10 @@ button {
 		text-align: center;
 	}
 
+	.container {
+		margin-top: 30px;
+	}
+
 	#sidebar {
 		background: #f6f6f6;
 		width: 100%;
