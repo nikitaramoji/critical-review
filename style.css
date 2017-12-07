@@ -32,7 +32,7 @@ form div div {
 
 form div input {
 	height: 35px;
-	width: 90%;
+	width: 100%;
 	border-bottom: 1px solid lightgrey;
 	border-top: none;
 	border-left: none;
